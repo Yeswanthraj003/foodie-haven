@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Foodie Haven</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header><h1>Welcome to Foodie Haven</h1></header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About Us</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/offers">Offers</a>
+    </nav>
+    <main>
+        <main>
+    <section>
+        <h2>Welcome to <span style="color:red;">Foodie Haven</span> 🍕🔥</h2>
+        <p>
+            At <strong>Foodie Haven</strong>, we're not just delivering food — we're delivering flavor, fire, and satisfaction with every bite.
+            Whether you're in the mood for a cheesy pizza, a crispy burger, spicy fries, or something sweet and chilled — we’ve got it all.
+        </p>
+        <img src="{{ url_for('static', filename='images/banner1.jpg') }}" alt="Food Banner" style="width:100%; max-height:400px; object-fit:cover; border-radius: 10px;">
+        <p>
+            Our menu is packed with over <strong>50+ delicious dishes</strong> made from fresh ingredients and loaded with flavor.
+            We bring the heat to your doorstep with fast delivery, hot offers, and food that satisfies every craving.
+        </p>
+        <img src="{{ url_for('static', filename='images/banner2.jpg') }}" alt="Food Banner" style="width:100%; max-height:400px; object-fit:cover; border-radius: 10px;">
+        <p>
+            Sit back, relax, and let Food Fire bring the feast to you. 😋🍔🍟
+        </p>
+        <img src="{{ url_for('static', filename='images/banner3.jpg') }}" alt="Food Banner" style="width:100%; max-height:400px; object-fit:cover; border-radius: 10px;">
+    </section>
+
+    <section>
+        <h3>🔥 What Makes Foodie Haven Special?</h3>
+        <ul>
+            <li>🕒 <strong>Fast Delivery</strong> — Food reaches you hot and fresh</li>
+            <li>🧾 <strong>Easy Online Orders</strong> — Simple & secure checkout</li>
+            <li>💰 <strong>Hot Offers Daily</strong> — Big savings on every meal</li>
+            <li>🍴 <strong>Wide Variety</strong> — From snacks to full meals</li>
+            <li>🚚 <strong>Contactless Delivery</strong> — Safety is our priority</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>🔥 Explore Our Site</h3>
+        <p>
+            ✅ <a href="/menu">View Full Menu</a><br>
+            ✅ <a href="/offers">Check Out Our Latest Offers</a><br>
+            ✅ <a href="/cart">View Your Cart</a><br>
+            ✅ <a href="/feedback">Give Feedback</a><br>
+            ✅ <a href="/contact">Contact Us for Queries</a>
+        </p>
+    </section>
+
+    <section>
+        <h3 style="color:red;">Ready to set your hunger on fire? 🔥</h3>
+        <p>
+            Click below and start your order now!
+        </p>
+        <a href="/menu" class="button" style="background-color:red; color:white; padding:10px 20px; border-radius:5px;">🍽️ Order Now</a>
+    </section>
+</main>
+
+    <footer>
+        © 2025 Foodie Haven
+    </footer>
+    </main>
+</body>
+</html>

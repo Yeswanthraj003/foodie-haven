@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foodie Heaven</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>🍕 Foodie Heaven 🍜</h1>
+</header>
+
+<nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('show_menu') }}">Menu</a>
+    <a href="{{ url_for('show_cart') }}">Cart</a>
+    <a href="{{ url_for('offers') }}">Offers</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="{{ url_for('feedback') }}">Feedback</a>
+</nav>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>@ 2025 Foodie Heaven. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

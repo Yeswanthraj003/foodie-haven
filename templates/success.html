@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success - Food Fire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="success-section">
+    <h2>✅ Success!</h2>
+    <p>{{ message }}</p>
+    <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+</div>
+    <header><h1>{{ message }}</h1></header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About Us</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/offers">Offers</a>
+    </nav>
+
+</body>
+</html>

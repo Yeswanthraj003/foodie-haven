@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Foodie Haven</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header><h1>Our Dishes</h1></header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About Us</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/offers">Offers</a>
+    </nav>
+<h2 style="text-align:center;">🍽️ Explore Our Menu</h2>
+
+<!-- Floating Category Sidebar -->
+<div class="category-sidebar">
+  <h4>Categories</h4>
+  <a href="#veg"> Veg</a>
+  <a href="#nonveg"> Non-Veg</a>
+  <a href="#drinks"> Drinks</a>
+  <a href="#desserts"> Desserts</a>
+  <a href="#Fast Food">Fast Food</a>
+</div>
+
+<!-- Menu Sections -->
+<div class="menu-sections">
+
+  <!-- Veg Section -->
+  <h3 id="veg">Veg</h3>
+  <div class="menu-container">
+    {% for item in menu if item.category == 'Veg' %}
+      <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.name }}">
+        <h4>{{ item.name }}</h4>
+        <p class="desc">{{ item.desc }}</p>
+        <p><strong>₹{{ item.price }}</strong></p>
+        <a href="{{ url_for('add_to_cart', item_id=item.id) }}" class="button">Add to Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Non-Veg Section -->
+  <h3 id="nonveg">Non-Veg</h3>
+  <div class="menu-container">
+    {% for item in menu if item.category == 'Non-Veg' %}
+      <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.name }}">
+        <h4>{{ item.name }}</h4>
+        <p class="desc">{{ item.desc }}</p>
+        <p><strong>₹{{ item.price }}</strong></p>
+        <a href="{{ url_for('add_to_cart', item_id=item.id) }}" class="button">Add to Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Drinks Section -->
+  <h3 id="drinks">Drinks</h3>
+  <div class="menu-container">
+    {% for item in menu if item.category == 'Drinks' %}
+      <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.name }}">
+        <h4>{{ item.name }}</h4>
+        <p class="desc">{{ item.desc }}</p>
+        <p><strong>₹{{ item.price }}</strong></p>
+        <a href="{{ url_for('add_to_cart', item_id=item.id) }}" class="button">Add to Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Desserts Section -->
+  <h3 id="desserts">Desserts</h3>
+  <div class="menu-container">
+    {% for item in menu if item.category == 'Desserts' %}
+      <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.name }}">
+        <h4>{{ item.name }}</h4>
+        <p class="desc">{{ item.desc }}</p>
+        <p><strong>₹{{ item.price }}</strong></p>
+        <a href="{{ url_for('add_to_cart', item_id=item.id) }}" class="button">Add to Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Desserts Section -->
+  <h3 id="Fast Food">Fast Food</h3>
+  <div class="menu-container">
+    {% for item in menu if item.category == 'Fast Food' %}
+      <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.name }}">
+        <h4>{{ item.name }}</h4>
+        <p class="desc">{{ item.desc }}</p>
+        <p><strong>₹{{ item.price }}</strong></p>
+        <a href="{{ url_for('add_to_cart', item_id=item.id) }}" class="button">Add to Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+
+
+</div>
+<a href="{{ url_for('home') }}" class="back-button">← Back to Home</a>
+
+    <footer>
+        © 2025 Foodie Haven
+    </footer>

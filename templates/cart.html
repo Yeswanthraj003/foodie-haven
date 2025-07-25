@@ -1,0 +1,20 @@
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<h1>Start Your Order</h1>
+<ul>
+  {% for item in cart %}
+    <li>{{ item.name }} - ₹{{ item.price }}</li>
+  {% endfor %}
+</ul>
+<p>Total: ₹{{ total }}</p>
+
+<h3>Delivery Information</h3>
+<a href="{{ url_for('offers') }}" class="offer-button">🎁 View Offers</a>
+<form method="post">
+  Name: <input type="text" name="name" required><br>
+  Contact: <input type="text" name="contact" required><br>
+  Address: <textarea name="address" required></textarea><br>
+  <label for="coupon">Coupon Code:</label>
+    <input type="text" name="coupon" placeholder="Enter your coupon code"><br><br>
+  <button type="submit">Place Order</button>
+</form>
+<a href="{{ url_for('home') }}" class="back-button">← Back to Home</a>
